@@ -1,0 +1,9 @@
+function verifyPass(){
+      var senha = document.getElementsByName("password1")[0].value;
+
+      var maiuscula="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      var numeros="0123456789";
+      var especiais="@$%&!";
+  }
+
+  onKeyUp={ validaSenha }
