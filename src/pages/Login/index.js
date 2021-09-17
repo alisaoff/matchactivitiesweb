@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { i18n } from '../../translate/i18n'
 //import api from '../../services/api'
 //import { Redirect } from 'react-router-dom';
-import {useAuth} from '../../contexts/auth';
+import { useAuth } from '../../contexts/auth';
 
 
 export default () => {
