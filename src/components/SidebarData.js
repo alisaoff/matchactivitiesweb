@@ -2,6 +2,7 @@ import React from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
+import { actionBegin } from '@syncfusion/ej2-schedule';
 
 export const SidebarData = [
     {
@@ -23,15 +24,16 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: 'Mensagens',
-        path: '/messages',
-        icon: <FaIcons.FaEnvelopeOpenText/>,
-        cName: 'nav-text'
-    },
-    {
         title: 'Suporte',
         path: '/suporte',
         icon: <IoIcons.IoMdHelpCircle/>,
         cName: 'nav-text'
     },
+    {
+        title: 'Sair',
+        path:  '/sair',
+        icon:  <IoIcons.IoMdExit/>,
+        cName: 'nav-text',
+    }
 ]
+

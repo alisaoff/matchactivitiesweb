@@ -11,7 +11,6 @@ interface AuthState {
 }
 
 interface SignInCredentials {
-  name: string;
   email: string;
   password: string;
 }
@@ -41,21 +40,22 @@ const AuthProvider: React.FC = ({ children }) => {
 
   const signOut = useCallback(() => {
     localStorage.removeItem('@MatchActivties:token');
-    localStorage.removeItem('@MatchActivities:user');
+    localStorage.removeItem('@MatchActivties:user');
 
     setData({} as AuthState);
   }, []);
 
-  const signIn = useCallback(async ({name, email, password }) => {
+  const signIn = useCallback(async ({email, password }) => {
     console.log("Está salvando os seguintes dados:")
-    console.log({name, email, password});
+    console.log({ email, password});
     const response = await api.post('/login', {
-      name, 
       email,
       password,
     });
 
+
     const { token, user } = response.data;
+    
 
     localStorage.setItem('@MatchActivties:token', token);
     localStorage.setItem('@MatchActivties:user', JSON.stringify(user));
